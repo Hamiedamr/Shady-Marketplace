@@ -1,8 +1,8 @@
-from flask import Flask,request,jsonify
+from flask import Flask,request,json
 
 app = Flask(__name__)
 @app.route("/signin",methods=['POST','GET'])
 def signin():
-       print(request.form)
-       return "done"
+       print(request.json)
+       return json.dumps({"message":"done"})
 

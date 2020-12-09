@@ -93,10 +93,10 @@ class _LoginState extends State<Login> {
                        * Send the username and password => signIn
                        */
 
-                      setState(() async {
-                        String data =
+                        dynamic data =
                             await createAlbum(userName.text, userPassword.text);
-                        print(data.toString());
+                      setState(()  {
+                        print(data['message']);
                       });
                     },
                     color: Colors.red,
